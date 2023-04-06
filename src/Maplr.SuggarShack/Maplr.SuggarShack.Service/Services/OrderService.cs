@@ -1,5 +1,4 @@
 ﻿using Maplr.SuggarShack.Domain.Entities;
-
 namespace Maplr.SuggarShack.Service.Services;
 
 public class OrderService : IOrderService
@@ -24,7 +23,7 @@ public class OrderService : IOrderService
                 Items = items.ToModel().ToList()
             };
 
-            await _orderRepository.CreateAsync(order, token);
+            await _orderRepository.CreateAsync(order, token);   
         }
 
         var orderValidationResponseDto = new OrderValidationResponseDto()
@@ -35,7 +34,6 @@ public class OrderService : IOrderService
 
         return orderValidationResponseDto;
     }
-
     private async Task<List<string>> ValidateItems(OrderLineDto[] items, CancellationToken token)
     {
         List<string> errors = new();
@@ -51,7 +49,7 @@ public class OrderService : IOrderService
             }
             else if (item.Qty > product.Stock)
             {
-                errors.Add($"The Qty {item.Qty} is greather than the quantity avaiable in stock {product.Stock} for the Product {product.Name}");
+                errors.Add($"The Qty {item.Qty} is greater than the quantity available in stock {product.Stock} for the Product {product.Name}");
             }
         }
 

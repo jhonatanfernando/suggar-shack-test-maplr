@@ -86,14 +86,8 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapCartRoutes();
 app.MapProductRoutes();
@@ -102,5 +96,7 @@ app.MapOrderRoutes();
 app.UseCors("Access-Control-Allow-Origin");
 
 app.UseSession();
+
+app.MigrateDatabase();
 
 app.Run();

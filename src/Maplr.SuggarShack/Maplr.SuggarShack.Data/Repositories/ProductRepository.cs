@@ -21,6 +21,8 @@ public class ProductRepository : IProductRepository
 
     public async Task<Product> GetByIdAsync(Guid id, CancellationToken token = default)
     {
-        return await _maplrContext.Products.Where(m => m.Id == id).SingleOrDefaultAsync(token);
+        return await _maplrContext.Products
+            .Where(m => m.Id == id)
+            .SingleOrDefaultAsync(token);
     }
 }

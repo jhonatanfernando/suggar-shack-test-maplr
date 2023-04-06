@@ -37,10 +37,10 @@ public class CustomBasicAuthenticationHandler : AuthenticationHandler<CustomBasi
             var password = credentials[1];
             //user = await _userService.Authenticate(username, password);
 
-            //TODO: It will be returned by a _userService
+            //TODO: It will be returned by the _userService
             user = new()
             {
-                Username = username,
+                UserName = username,
                 Password = password
             };
         }
@@ -54,7 +54,7 @@ public class CustomBasicAuthenticationHandler : AuthenticationHandler<CustomBasi
 
         var claims = new[] {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Name, user.UserName),
             };
         var identity = new ClaimsIdentity(claims, Scheme.Name);
         var principal = new ClaimsPrincipal(identity);
