@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maplr.SuggarShack.Data", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maplr.SuggarShack.Api", "Maplr.SuggarShack.Api\Maplr.SuggarShack.Api.csproj", "{4319C775-18D6-4BD4-9CD2-A63DAB903D28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maplr.SuggarShack.Core", "Maplr.SuggarShack.Core\Maplr.SuggarShack.Core.csproj", "{AEDE0004-74A1-4C16-9A59-D76F20AA7B34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maplr.SuggarShack.Core", "Maplr.SuggarShack.Core\Maplr.SuggarShack.Core.csproj", "{AEDE0004-74A1-4C16-9A59-D76F20AA7B34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maplr.SuggarShack.Tests", "..\..\test\Maplr.SuggarShack.Tests\Maplr.SuggarShack.Tests.csproj", "{B9CB22A8-4C08-48E6-A853-19496326A3A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AEDE0004-74A1-4C16-9A59-D76F20AA7B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEDE0004-74A1-4C16-9A59-D76F20AA7B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEDE0004-74A1-4C16-9A59-D76F20AA7B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9CB22A8-4C08-48E6-A853-19496326A3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9CB22A8-4C08-48E6-A853-19496326A3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9CB22A8-4C08-48E6-A853-19496326A3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9CB22A8-4C08-48E6-A853-19496326A3A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
